@@ -5,13 +5,17 @@ class Battleshipsweb < Sinatra::Base
   set :views, Proc.new { File.join(root, "..", "views") }
 
   get '/' do
-    'Hello Battleshipsweb!'
     erb :index
   end
 
 
+  get '/name' do
+    erb :player
+  end
+
   get '/new_game' do
-    "What's your name?"
+    @player = params[:player]
+    "Welcome to the Battleships #{@player} !"
   end
 
   # start the server if ruby file executed directly
