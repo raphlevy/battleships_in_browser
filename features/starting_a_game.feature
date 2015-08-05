@@ -8,6 +8,5 @@ Feature: Starting the game
     When I press "New Game"
     Then I should see "What's your name?"
     Given I am on the "name" page
-    When I fill in text box with "Daryl"
-    When I press "Submit"
-    Then I should see "Welcome to the Battleships Daryl!"
+    When I fill in text box with "Diego" `AND I press "Submit"
+    Then I should see "Welcome to the Battleships Diego!"
