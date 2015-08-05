@@ -10,3 +10,8 @@ Feature: Starting the game
     Given I am on the "name" page
     When I fill in text box with "Diego" `AND I press "Submit"
     Then I should see "Welcome to the Battleships Diego!"
+
+  Scenario: No user input for name
+    Given I am on the "name" page
+    When I press "Submit"
+    Then I should see 'Welcome unknown player!'

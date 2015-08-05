@@ -15,7 +15,7 @@ class Battleshipsweb < Sinatra::Base
 
   get '/new_game' do
     @player = params[:player]
-    "Welcome to the Battleships #{@player}!"
+    erb :welcome
   end
 
   # start the server if ruby file executed directly
